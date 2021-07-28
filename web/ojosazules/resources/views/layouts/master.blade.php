@@ -1,3 +1,11 @@
+ <!--   rezo para que sea buena nota 
+        https://i.pinimg.com/originals/8c/1f/c3/8c1fc3a719934bfa3e4dbbaddf3e6e1d.gif
+
+        AVISO!!!!! Profe!
+        El alumno Joaquin Mogollon me robo con un for ya que tenia un error que no pudimos solucionar dese las 4 asta el comienso del zoom.
+        aviso por este medio tambien para pre venir que lamentar.
+-->
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -16,17 +24,16 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-primary">
             <div class="container-fluid">
               <a class="navbar-brand" href="{{route('home')}}">
-                <img class="logo" src="{{asset('img/logo.png')}}"> Cacharrek
+                <img class="logo" src="{{asset('img/logo.png')}}">
             </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="{{route('home')}}">ingresar un celular</a>
-                  <a class="nav-link" href="{{route('ver_lo_ingresado')}}">Ver los celulares</a>
-                  <a class="nav-link" href="{{route('ver_uno')}}">ver uno</a>
-                  <a class="nav-link" href="{{route('ingreso_uno')}}">ingreso uno</a>
+                  <a class="nav-link active" aria-current="page" href="{{route('home')}}">Registrar Lectura</a>
+                  <a class="nav-link" href="{{route('ver_lo_ingresado')}}">Medifiones existentes</a>
+                  <a class="nav-link" href="{{route('ver_uno')}}">Home</a>
                 </div>
               </div>
             </div>

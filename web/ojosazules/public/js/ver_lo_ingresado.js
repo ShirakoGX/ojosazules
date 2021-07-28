@@ -5,12 +5,12 @@ const iniciarEliminacion = async function() {
         if (await eliminarConsola(id)){
             let consolas = await getConsolas();
             cargarTabla(consolas);
-            Swal.fire("Consola Eliminada","Consola eliminada exitodamente", "info");
+            Swal.fire("Lectura Eliminada","Lectura eliminada exitodamente", "info");
         }else{
-            Swal.fire("Error", "No se pudo atender la solicitud", "error");
+            Swal.fire("Error", "No se pudo atender la solicitud", "warning");
         }
     }else{
-        Swal.fire("Cancelado","Cancelado a peticion del usuario", "info")
+        Swal.fire("Cancelado","Cancelado a peticion del usuario", "warning")
     }
 }; 
 
@@ -20,14 +20,20 @@ const cargarTabla = (consolas)=>{
     for(let i=0; i<consolas.length;++i){
     let tr = document.createElement("tr");
 
-    let tdNombre = document.createElement("td");
-    tdNombre.innerText = consolas[i].nombre;
+    let tdFecha = document.createElement("td");
+    tdFecha.innerText = consolas[i].fecha;
 
-    let tdMarca = document.createElement("td");
-    tdMarca.innerText = consolas[i].marca;
+    let tdHora = document.createElement("td");
+    tdHora.innerText = consolas[i].hora;
 
-    let tdAnio = document.createElement("td");
-    tdAnio.innerText = consolas[i].anio;
+    let tdTipo = document.createElement("td");
+    tdTipo.innerText = consolas[i].tipo;
+
+    let tdValor = document.createElement("td");
+    tdValor.innerText = consolas[i].valor;
+
+    let tdMedida = document.createElement("td");
+    tdMedida.innerText = consolas[i].medida;
 
     let tdAcciones = document.createElement("td");
     let botonEliminar = document.createElement("button");
@@ -37,10 +43,11 @@ const cargarTabla = (consolas)=>{
     botonEliminar.addEventListener("click", iniciarEliminacion);
     tdAcciones.appendChild(botonEliminar);
 
-    tr.appendChild(tdNombre);
-    tr.appendChild(tdMarca);
-    tr.appendChild(tdAnio);
-    tr.appendChild(tdAcciones);
+    tr.appendChild(tdFecha);
+    tr.appendChild(tdHora);
+    tr.appendChild(tdTipo);
+    tr.appendChild(tdValor);
+    tr.appendChild(tdMedida);
 
     tbody.appendChild(tr);
     }

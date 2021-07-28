@@ -15,9 +15,12 @@ class CrearTablaConsolas extends Migration
     {
         Schema::create('consolas', function (Blueprint $table) {
             $table->id();
-            $table->string("nombre",150);
-            $table->string("marca",50);
-            $table->integer("anio");
+            $table->date("fecha");
+            $table->string("hora");
+            $table->integer("medidor");
+            $table->string("direccion");
+            $table->integer("valor",500);
+            $table->dtring("medidas");
             $table->timestamps();
         });
     }

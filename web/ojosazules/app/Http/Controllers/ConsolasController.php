@@ -6,15 +6,28 @@ use App\Models\Consola;
 
 class ConsolasController extends Controller
 {
-    public function getMarcas(){
-        $marcas = array(); 
-        $marcas[] = "Huawei";
-        $marcas[] = "Samsung";
-        $marcas[] = "Xiaomi";
-        $marcas[] = "Motorola";
-        $marcas[] = "Apple";
+    public function getTipos(){
+        $tipos = array(); 
+        $tipos[] = "01";
+        $tipos[] = "02";
+        $tipos[] = "03";
+        $tipos[] = "04";
+        $tipos[] = "05";
+        $tipos[] = "06";
+        $tipos[] = "07";
+        $tipos[] = "08";
+        $tipos[] = "09";
+        $tipos[] = "10";
 
-        return $marcas;
+        return $tipos;
+    }
+    public function getMedidas(){
+        $medidas = array(); 
+        $medidas[] = "KiloWatts";
+        $medidas[] = "Watts";
+        $medidas[] = "Temperatura";
+
+        return $medidas;
     }
     public function getConsolas(){
         $consolas=Consola::all();
@@ -23,9 +36,11 @@ class ConsolasController extends Controller
     public function crearConsola(Request $request){
         $input = $request->all();
         $consola = new Consola();
-        $consola->nombre = $input["nombre"];
-        $consola->marca = $input["marca"];
-        $consola->anio = $input["anio"];
+        $consola->fecha = $input["fecha"];
+        $consola->hora = $input["hora"];
+        $consola->retipo = $input["tipo"];
+        $consola->valor = $input["valor"];
+        $consola->medida = $input["medida"];
         $consola->save();
         return $consola;
     }

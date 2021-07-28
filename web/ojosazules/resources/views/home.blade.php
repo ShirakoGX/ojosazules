@@ -1,25 +1,37 @@
 @extends("layouts.master")
 @section("contenido")
-    <h1>página principal (1)</h1>
     <div class="row mt-5">
         <div class="col-12 col-md-6 col-lg-5 mx-auto">
             <div class="card">
                 <div class= "card-header bg-primary text-black">
-                    <span>Agregar nuevo Telefono</span>
+                    <span>Agregar Lectura</span>
                 </div>
                 <div class="card-body">
                     <div class="mb-3">
-                        <label for="nombre-txt" class="form-label">Nombre</label>
-                        <input type="text" id="nombre-txt" class="form-control">
+                        <label for="fecha-txt" class="form-label">Fecha</label>
+                        <input type="date" id="fecha-txt" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="marca-select" class="form-label">Marca</label>
-                        <select class="form-select" id="marca-select">
+                        <label for="hora-txt" class="form-label">Hora</label>
+                        <input type="time" id="hora-txt" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipo-select" class="form-label">Seleccionar Medidor</label>
+                        <select class="form-select" id="tipo-select">
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="anio-txt" class="form-label" >Año de fabricación</label>
-                        <input type="number" class=form-control id="anio-txt">
+                        <label for="direccion-txt" class="form-label" >Direccion</label>
+                        <input type="text" class=form-control id="direccion-txt">
+                    </div>
+                    <div class="mb-3">
+                        <label for="valor-txt" class="form-label">valor</label>
+                        <input type="number" id="valor-txt" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="medida-select" class="form-label">Seleccionar Unidad de Medida</label>
+                        <select class="form-select" id="medida-select">
+                        </select>
                     </div>
                 </div>
                 <div class="card-footer d-grid gap-1">
